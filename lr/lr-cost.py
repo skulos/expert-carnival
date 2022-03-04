@@ -31,7 +31,7 @@ plt.figure(figsize=(10,6))
 plt.scatter(X, y, alpha=0.3)
 
 # Adding the regression line here:
-plt.plot(X, regression.predict(X)) #, color='red', linewidth=3)
+plt.plot(X, regression.predict(X), color='red', linewidth=3)
 
 plt.title('Film Cost vs Global Revenue')
 plt.xlabel('Production Budget $')
@@ -39,3 +39,6 @@ plt.ylabel('Worldwide Gross $')
 plt.ylim(0, 3000000000)
 plt.xlim(0, 450000000)
 plt.show()
+
+#Getting r square from Regression
+print(regression.score(X, y))
